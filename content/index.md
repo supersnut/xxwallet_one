@@ -1,6 +1,6 @@
 ---
 layout: index
-title: 'XX Wallet One - Generate a XX wallet directly from your browser'
+title: 'XX Wallet One: Generate a XX wallet from your browser'
 ---
 
 ::HeroParagraph
