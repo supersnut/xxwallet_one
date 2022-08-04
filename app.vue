@@ -2,6 +2,7 @@
 useHead(
 {
   // HTML Meta Tags
+  title: 'XX Wallet One - Generate a XX wallet directly from your browser.',
   meta: [
     { title: 'XX Wallet One - Generate a XX wallet directly from your browser.'},
     // { charset: 'utf-8'}, already applied by default, it seems
