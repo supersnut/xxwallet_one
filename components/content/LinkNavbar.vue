@@ -16,55 +16,67 @@ const props = defineProps({
         </nuxt-link>
         -->
         <nuxt-link to="https://github.com/supersnut/xxwallet_one" class="navbar-item">
-          <img width="24" height="24" src="/github.png"/>
+          <img class="source_icon" src="/github.png"/>
+          <p class="navbar-text-extra">&nbsp;Source</p>
         </nuxt-link>
-        <nuxt-link to="https://explorer.xx.network/" class="navbar-item">
-          Explorer
+        <nuxt-link to="https://explorer.xx.network/" class="navbar-item navbar-xx-icon">
+          <img class="social_icon xx-icon" src="/xx.svg"/>
+          &nbsp;Explorer
         </nuxt-link>
-        <nuxt-link to="https://wallet.xx.network/" class="navbar-item">
-          Wallet
+        <nuxt-link to="https://wallet.xx.network/" class="navbar-item navbar-xx-icon">
+          <img class="social_icon xx-icon" src="/xx.svg"/>
+          &nbsp;Wallet
         </nuxt-link>
-        <nuxt-link to="https://xx.network/" class="navbar-item">
-          Network
+        <nuxt-link to="https://xx.network/" class="navbar-item navbar-xx-icon">
+          <img class="social_icon xx-icon" src="/xx.svg"/>
+          &nbsp;Network
         </nuxt-link>
-        <nuxt-link to="https://dashboard.xx.network/" class="navbar-item">
-          Dashboard
+        <nuxt-link to="https://dashboard.xx.network/" class="navbar-item navbar-xx-icon">
+          <img class="social_icon xx-icon" src="/xx.svg"/>
+          &nbsp;Dashboard
         </nuxt-link>
         <nuxt-link to="https://xxnetwork.wiki" class="navbar-item">
-          Wiki
+          <img class="social_icon xx-icon" src="/xx.svg"/>
+          &nbsp;Wiki
         </nuxt-link>
       </div>
     <div class="navbar-brand">
-      <nuxt-link to="https://discord.com/invite/Y8pCkbK" class="navbar-item">
+      <nuxt-link to="https://discord.com/invite/Y8pCkbK" class="navbar-item navbar-text-discord">
         <img class="social_icon" src="/discord.svg"/>
+        <p class="navbar-text-extra">&nbsp;Discord</p>
       </nuxt-link>
-      <nuxt-link to="https://t.me/xxnetwork" class="navbar-item">
+      <nuxt-link to="https://t.me/xxnetwork" class="navbar-item navbar-text-telegram">
         <img class="social_icon" src="/telegram.svg"/>
+        <p class="navbar-text-extra">&nbsp;Telegram</p>
       </nuxt-link>
-      <nuxt-link to="https://twitter.com/xx_network" class="navbar-item">
+      <nuxt-link to="https://twitter.com/xx_network" class="navbar-item navbar-text-twitter">
         <img class="social_icon" src="/twitter.svg"/>
+        <p class="navbar-text-extra">&nbsp;Twitter</p>
       </nuxt-link>
       <nuxt-link to="https://coinmarketcap.com/currencies/xx-network/" class="navbar-item">
         <img class="social_icon" src="/coinmarketcap.png"/>&nbsp;Market
-      </nuxt-link>
-      <nuxt-link to="https://www.mexc.com/exchange/XX_USDT" class="navbar-item">
+        </nuxt-link>
+      <nuxt-link to="https://www.mexc.com/exchange/XX_USDT" class="navbar-item navbar-text">
         MEXC
       </nuxt-link>
-      <nuxt-link to="https://forum.xxnetwork" class="navbar-item">
+      <nuxt-link to="https://forum.xxnetwork" class="navbar-item navbar-text">
         Forum
       </nuxt-link>
-      <nuxt-link to="https://xxnetwork.wiki/How_to_Nominate" class="navbar-item">
+      <nuxt-link to="https://xxnetwork.wiki/How_to_Nominate" class="navbar-item navbar-text">
         Staking
       </nuxt-link>
-
     </div>
   </nav>
 </template>
 
 <style>
+.source_icon {
+  width: 24px;
+  height: 24px;
+}
 .social_icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 .navbar {
   background: rgba(255,255,255,0.85);
@@ -82,6 +94,26 @@ const props = defineProps({
 @media (min-width: 320px) {
   .navbar-item {
     font-size: 0.7rem;
+  }
+}
+@media (max-width: 479px) {
+  .xx-icon {
+    display: none;
+  }
+  .navbar-text-extra {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) {
+  .navbar-text::before {
+    content: "🔗 ";
+  }
+  .navbar-text-extra {
+    display: inline;
+  }
+  .xx-icon {
+    display: inline;
   }
 }
 @media (min-width: 600px) {
