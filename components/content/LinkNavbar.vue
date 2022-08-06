@@ -59,10 +59,12 @@ const props = defineProps({
       <nuxt-link to="https://www.mexc.com/exchange/XX_USDT" class="navbar-item navbar-text">
         MEXC
       </nuxt-link>
-      <nuxt-link to="https://forum.xxnetwork" class="navbar-item navbar-text">
+      <nuxt-link to="https://forum.xxnetwork" class="navbar-item">
+        <img class="social_icon xx-icon" src="/xx.svg"/>
         Forum
       </nuxt-link>
-      <nuxt-link to="https://xxnetwork.wiki/How_to_Nominate" class="navbar-item navbar-text">
+      <nuxt-link to="https://xxnetwork.wiki/How_to_Nominate" class="navbar-item">
+        <img class="social_icon xx-icon" src="/xx.svg"/>
         Staking
       </nuxt-link>
     </div>
@@ -96,7 +98,7 @@ const props = defineProps({
     font-size: 0.7rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 499px) {
   .xx-icon {
     display: none;
   }
@@ -105,7 +107,7 @@ const props = defineProps({
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 500px) {
   .navbar-text::before {
     content: "🔗 ";
   }
