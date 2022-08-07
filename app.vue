@@ -2,6 +2,9 @@
 useHead(
 {
   // HTML Meta Tags
+  htmlAttrs: {
+    lang: 'en'
+  },
   meta: [
     // { charset: 'utf-8'}, already applied by default, it seems
     { 'http-equiv': 'X-UA-Compatible', content:'IE=edge'},
@@ -11,7 +14,7 @@ useHead(
     { 'http-equiv': 'Expires', content:'0'},
     { name:'viewport', content:'width=device-width, initial-scale=1'},
     { name:'application-name', content:'XX Wallet One'},
-    { name:'keywords', content:'XX Wallet, XX Coin Wallet, Crypto Wallet, Cryptocurrency Wallet, Secure wallet, XX Wallet One, Wallet One, Offline Wallet Creator, Offline Wallet Generator, XX Network, XX Coin'},
+    { name:'keywords', content:'XX wallet, XX coin wallet, create XX wallet, generate XX wallet, XX wallet creator, XX wallet generator, crypto wallet, cryptocurrency wallet, secure XX wallet, XX Wallet One, Wallet One, Offline Wallet, XX Network, XX Coin'},
     { name:'robots', content:'index'},
     { name:'googlebot-news', content:'noindex'},
 
