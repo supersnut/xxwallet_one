@@ -19,6 +19,8 @@ npm run dev
 
 ### Production
 
+[NuxtJS deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
 Generate the static website for production:
 
 ```bash

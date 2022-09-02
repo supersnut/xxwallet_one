@@ -1,11 +1,10 @@
-.idea/
 node_modules
 *.log*
 .nitro
 .output
 # Local Netlify folder
 .netlify
-
+.idea/
 # Logs
 logs
 *.log

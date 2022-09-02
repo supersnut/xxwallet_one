@@ -19,28 +19,17 @@ Create your first XX Wallet
 ::
 
 ::GenerateWalletButton
-Generate quantum-ready wallet
 ::
 
-::Mnemonic{title='1/3 Public Wallet Address' id='PublicAddress'}
-::
-
-::Mnemonic{title='2/3 Standard Mnemonic' id='StandardMnemonic'}
-This recovery phrase is used like any other cryptocurrency recovery phrase. 
-If you want to recreate your wallet, you need to use this recovery phrase.
-::
-
-::Mnemonic{title='3/3 Quantum Mnemonic' id='QuantumMnemonic'}
-This recovery phrase will be used in the future
-when the xx network consensus adopts quantum-secure signatures.
-Your Standard recovery phrase is generated from this.
-::
-
-::Tips{title='🔒️ Security Tips️ 🔒️'}
+::TipList{title='🔒️ Security Tips️ 🔒️'}
 * It is extremely important that you store BOTH mnemonic phrases in a safe, secure, and private location.
 * Losing your recovery phrase will result in the inability to access your coins.
-* Never give your recovery phrase to anyone — Knowledge of the recovery phrase is the same as control of the wallet. Sharing a recovery phrase gives the holder complete access to all funds in the wallet.
-* Ensure that you trust any application you enter your recovery phrase into — Any application that knows them has complete control of your funds.
-* It is not advised to store a wallet on a cloud service or a computer, unless the wallet file is encrypted by a strong password that you are the only one to control.
-* Store your recovery phrase somewhere safe, avoid taking a picture of it and uploading it on Google Photo or Apple iCloud.
+* Never give your recovery phrase to anyone — Knowledge of the recovery phrase is the same as control of the
+wallet. Sharing a recovery phrase gives the holder complete access to all funds in the wallet.
+* Ensure that you trust any application you enter your recovery phrase into — Any application that knows
+them has complete control of your funds.
+* It is not advised to store a wallet on a cloud service or a computer, unless the wallet file is encrypted
+by a strong password that you are the only one to control.
+* Store your recovery phrase somewhere safe, avoid taking a picture of it and uploading it on Google Photo
+or Apple iCloud.
 ::
