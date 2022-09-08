@@ -4,12 +4,28 @@ export default {
     // now it will only be executed client-side
     mounted() {
 
-        Window.copyToClickBoard = (id) => {
+        Window.copyToClickBoard = (e) => {
             // As the API is only available to Secure Contexts,
             // it cannot be used from a content script running on http:-pages, only https:-pages.
             // https://developer.mozilla.org/en-US/docsMozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
             if (!navigator || !navigator.clipboard) {
                 console.log("Clipboard API not available...");
+                return;
+            }
+            const attributes = e.target.attributes;
+            if (!attributes) {
+                console.log("Missing attributes on target");
+                console.log(e.target);
+                return;
+            }
+            const attribute = attributes["name"];
+            if (!attribute) {
+                console.log("Missing attribute 'name'");
+                return;
+            }
+            const id = attribute.nodeValue;
+            if (!id) {
+                console.log("Missing element id:" + id);
                 return;
             }
             const elem = document.getElementById(`${id}.0`);
