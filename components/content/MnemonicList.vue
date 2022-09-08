@@ -4,28 +4,12 @@ export default {
     // now it will only be executed client-side
     mounted() {
 
-        Window.copyToClickBoard = (e) => {
+        Window.copyToClickBoard = (id) => {
             // As the API is only available to Secure Contexts,
             // it cannot be used from a content script running on http:-pages, only https:-pages.
             // https://developer.mozilla.org/en-US/docsMozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
             if (!navigator || !navigator.clipboard) {
                 console.log("Clipboard API not available...");
-                return;
-            }
-            const attributes = e.target.attributes;
-            if (!attributes) {
-                console.log("Missing attributes on target");
-                console.log(e.target);
-                return;
-            }
-            const attribute = attributes["name"];
-            if (!attribute) {
-                console.log("Missing attribute 'name'");
-                return;
-            }
-            const id = attribute.nodeValue;
-            if (!id) {
-                console.log("Missing element id:" + id);
                 return;
             }
             const elem = document.getElementById(`${id}.0`);
@@ -70,11 +54,12 @@ const props = defineProps({
                         {{ props.title }}
                     </h2>
                     <div class="tags level-item are-medium event-disabled">
-                        <!-- public address -->
+                        <!-- public address: id is required for clipboard access -->
                         <span v-if="props.id === 'PublicAddress'"
+                              id="PublicAddress.0"
                               translate="no"
                               class="notranslate custom-tag public-address tag-color-0">{{ props.mnemonic }}</span>
-                        <!-- mnemonic -->
+                        <!-- mnemonic: id are required for clipboard access -->
                         <div v-else>
                             <div v-for="(item,index) in props.mnemonic.split(' ')"
                                  v-bind:key="`div.${props.id}.${index}`"
@@ -82,6 +67,7 @@ const props = defineProps({
                                 <p class='no-select' style='display:inline-flex;'>{{ index + 1 }}.</p>
                                 <span
                                     v-bind:key="`div.span.${props.id}.${index}`"
+                                    :id="`${props.id}.${index}`"
                                     translate="no"
                                     :class="`notranslate custom-tag mnemonic tag-color-${(index-(index%4))/4}`">{{
                                         item
