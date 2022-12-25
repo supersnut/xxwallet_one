@@ -1,3 +1,8 @@
+<a href="https://scan.coverity.com/projects/xxwallet_one">
+  <img alt="Coverity Scan Build Status"
+       src="https://img.shields.io/coverity/scan/27208.svg"/>
+</a>
+
 ## XX Wallet One
 
 * Tested with [Node.js](https://nodejs.org/) v16.16
